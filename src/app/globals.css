@@ -19,12 +19,15 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
+  display: flex;
+  justify-content: space-between;
 }
 
-@layer components {
+/* Example of how to add custom style */
+/* @layer components {
   .card {
     border-radius: 40px;
     filter: drop-shadow(0px 10px 10px black);
     max-width: 256px;
   }
-}
+} */

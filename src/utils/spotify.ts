@@ -1,3 +1,25 @@
+export type Artist = {
+  external_urls: {
+    spotify: string
+  },
+  followers: {
+    href: string,
+    total: number
+  },
+  genres: string[],
+  href: string,
+  id: string,
+  images: {
+    height: number,
+    url: string,
+    width: number
+  }[],
+  name: string,
+  popularity: number,
+  type: string,
+  uri: string
+}
+
 const getAccessToken = async () => {
     const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
 
