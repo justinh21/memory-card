@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/auth-helpers-nextjs": "^0.8.1",
+    "@supabase/auth-ui-react": "^0.4.5",
+    "@supabase/auth-ui-shared": "^0.1.7",
     "@supabase/supabase-js": "^2.34.0",
     "@types/node": "20.6.2",
     "@types/react": "18.2.21",
@@ -25,6 +28,7 @@
     "uniqid": "^5.4.0"
   },
   "devDependencies": {
-    "@types/uniqid": "^5.3.2"
+    "@types/uniqid": "^5.3.2",
+    "supabase": "^1.99.5"
   }
 }

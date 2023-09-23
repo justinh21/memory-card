@@ -5,8 +5,11 @@ import { Artist } from '@/utils/spotify';
 import { useEffect, useState } from 'react';
 import uniqid from "uniqid";
 
+
 export default function Game({usersTopArtists}: any) {
   const [isClient, setIsClient] = useState<boolean>(false)
+
+  const [session, setSession] = useState<any>(null)
 
   // Get initial deck
   const random = Array.from({length: 30}, () => Math.floor(Math.random() * usersTopArtists.length))
@@ -48,7 +51,7 @@ export default function Game({usersTopArtists}: any) {
     <Card key={uniqid()} id={i} artist={artist} onPress={selectedCard}/>)
   );
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col min-w-full'>
       <Header score={chosenCards.length} highscore={highscore}/>
       <div className='flex flex-wrap justify-around items-left justify-items-stretch'>
         {listitems}
